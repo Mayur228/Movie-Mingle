@@ -147,7 +147,7 @@ fun SearchScreenContent(
                 onEvent = onEvent,
                 state = state,
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(10.dp))
 
             Box(
                 modifier = Modifier.fillMaxSize(),
@@ -248,7 +248,7 @@ fun SearchBar(
                 color = primaryGray
             )
         },
-        shape = MaterialTheme.shapes.large,
+        shape = RoundedCornerShape(50),
         keyboardOptions = KeyboardOptions(
             capitalization = KeyboardCapitalization.Words,
             autoCorrect = true,
@@ -309,7 +309,8 @@ fun SearchItem(
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .fillMaxWidth(0.35f),
+                    .width(130.dp)
+                    .height(200.dp),
             )
 
             Column(

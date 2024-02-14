@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -48,8 +49,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
@@ -248,8 +252,7 @@ fun HomeScreenContent(
                     Box(
                         Modifier
                             .fillMaxWidth()
-                            .height(220.dp),
-                        contentAlignment = Alignment.Center
+                            .height(210.dp),
                     ) {
                         LazyRow(
                             horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -262,8 +265,8 @@ fun HomeScreenContent(
                                         val film = trendingTvSeries[index]
                                         FilmItem(
                                             modifier = Modifier
-                                                .height(190.dp)
-                                                .width(300.dp)
+                                                .height(200.dp)
+                                                .width(175.dp)
                                                 .clickable {
                                                     onEvent(
                                                         HomeUiEvents.NavigateToFilmDetails(
@@ -282,8 +285,8 @@ fun HomeScreenContent(
                                         val film = trendingMovies[index]
                                         FilmItem(
                                             modifier = Modifier
-                                                .height(190.dp)
-                                                .width(300.dp)
+                                                .height(200.dp)
+                                                .width(175.dp)
                                                 .clickable {
                                                     onEvent(
                                                         HomeUiEvents.NavigateToFilmDetails(
@@ -841,11 +844,20 @@ fun FilmItem(
         placeholder = painterResource(R.drawable.ic_placeholder),
         error = painterResource(id = R.drawable.ic_placeholder),
         contentDescription = null,
-        contentScale = ContentScale.Crop,
+        contentScale = ContentScale.FillBounds,
+        filterQuality = FilterQuality.High,
         modifier = modifier
             .fillMaxSize()
+            .scale(0.9f)
+            .shadow(
+                elevation = 5.dp,
+                spotColor = Color.Red,
+                clip = false,
+                ambientColor = Color.Red,
+                shape = RoundedCornerShape(8.dp)
+            )
             .clip(
-                shape = RoundedCornerShape(16.dp),
+                shape = RoundedCornerShape(8.dp),
             )
             /*.graphicsLayer(scaleX = scaleAnimatable.value, scaleY = scaleAnimatable.value)
             .pointerInput(Unit) {
