@@ -148,4 +148,8 @@ dependencies {
 
     // Livedata
     implementation(libs.androidx.runtime.livedata)
+
+    // Lottie
+    implementation(libs.lottie.animation)
+
 }

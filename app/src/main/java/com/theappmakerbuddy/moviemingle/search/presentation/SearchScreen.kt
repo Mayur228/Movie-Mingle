@@ -52,6 +52,7 @@ import com.theappmakerbuddy.moviemingle.destinations.FilmDetailsScreenDestinatio
 import com.theappmakerbuddy.moviemingle.genre.domain.model.Genre
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.theappmakerbuddy.moviemingle.common.util.AnimatedPreloader
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -212,12 +213,19 @@ fun SearchScreenContent(
                                     verticalArrangement = Arrangement.Center,
                                     horizontalAlignment = Alignment.CenterHorizontally
                                 ) {
-                                    Image(
+                                    AnimatedPreloader(modifier = Modifier.size(250.dp),animation = R.raw.not_found)
+                                    Text(
+                                        text = "Uh-oh! No luck with that search. Make sure the movie title is accurate",
+                                        color = Color.White,
+                                        modifier = Modifier.padding(15.dp),
+                                        textAlign = TextAlign.Center
+                                    )
+                                    /*Image(
                                         modifier = Modifier
                                             .size(250.dp),
                                         painter = painterResource(id = R.drawable.ic_empty_cuate),
                                         contentDescription = null
-                                    )
+                                    )*/
                                 }
                             }
                         }

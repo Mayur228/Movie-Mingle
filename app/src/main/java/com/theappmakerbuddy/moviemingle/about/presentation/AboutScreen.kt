@@ -23,6 +23,7 @@ import com.theappmakerbuddy.moviemingle.common.util.appVersionCode
 import com.theappmakerbuddy.moviemingle.common.util.appVersionName
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.theappmakerbuddy.moviemingle.common.presentation.theme.titleText
 
 @Destination
 @Composable
@@ -70,7 +71,7 @@ fun AboutScreenContent(
             contentPadding = PaddingValues(16.dp),
         ) {
             item {
-                Image(
+                /*Image(
                     painterResource(
                         id = R.drawable.muviz
                     ),
@@ -79,6 +80,17 @@ fun AboutScreenContent(
                         .fillMaxWidth()
                         .height(90.dp)
                         .padding(8.dp)
+                )*/
+                Text(
+                    text = "Movie Mingle",
+                    fontSize = 35.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Red,
+                    fontFamily = titleText,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .padding(horizontal = 8.dp)
+                        .fillMaxWidth()
                 )
             }
 

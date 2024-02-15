@@ -29,6 +29,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberImagePainter
@@ -36,6 +37,7 @@ import com.theappmakerbuddy.moviemingle.common.presentation.components.StandardT
 import com.theappmakerbuddy.moviemingle.common.presentation.theme.Transparent
 import com.theappmakerbuddy.moviemingle.common.presentation.theme.primaryDark
 import com.theappmakerbuddy.moviemingle.common.presentation.theme.primaryPink
+import com.theappmakerbuddy.moviemingle.common.util.AnimatedPreloader
 import com.theappmakerbuddy.moviemingle.favorites.data.data.local.Favorite
 import com.theappmakerbuddy.moviemingle.filmdetail.presentation.common.VoteAverageRatingIndicator
 import timber.log.Timber
@@ -178,12 +180,19 @@ fun FavoritesScreen(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Image(
+                AnimatedPreloader(modifier = Modifier.size(250.dp),animation = R.raw.empty_favorite)
+                Text(
+                    text = "Looks like your favorites list is feeling a bit lonely! Start adding movies to your favorites",
+                    color = Color.White,
+                    modifier = Modifier.padding(15.dp),
+                    textAlign = TextAlign.Center
+                )
+                /*Image(
                     modifier = Modifier
                         .size(250.dp),
                     painter = painterResource(id = R.drawable.ic_empty_cuate),
                     contentDescription = null
-                )
+                )*/
             }
         }
 

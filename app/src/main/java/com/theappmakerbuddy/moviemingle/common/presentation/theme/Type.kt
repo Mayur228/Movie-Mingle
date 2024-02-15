@@ -14,7 +14,11 @@ val quicksand = FontFamily(
     Font(R.font.quicksand_regular, FontWeight.Normal),
     Font(R.font.quicksand_medium, FontWeight.Medium),
     Font(R.font.quicksand_semibold, FontWeight.SemiBold),
-    Font(R.font.quicksand_bold, FontWeight.Bold)
+    Font(R.font.quicksand_bold, FontWeight.Bold),
+)
+
+val titleText = FontFamily(
+    Font(R.font.title_regular, FontWeight.Bold)
 )
 
 

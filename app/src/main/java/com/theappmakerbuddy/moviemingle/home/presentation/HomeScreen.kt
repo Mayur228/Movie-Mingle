@@ -80,6 +80,7 @@ import com.theappmakerbuddy.moviemingle.destinations.SearchScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.theappmakerbuddy.moviemingle.common.presentation.theme.titleText
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -167,14 +168,22 @@ fun HomeScreenContent(
                 },
                 title = {
                     Column {
-                        Image(
+                        /*Image(
                             painterResource(
                                 id = R.drawable.muviz
                             ),
                             contentDescription = "App logo",
                             modifier = Modifier
                                 .size(width = 90.dp, height = 90.dp)
-                                .padding(8.dp)
+                                .padding(8.dp,)
+                        )*/
+                        Text(
+                            text = "Movie Mingle",
+                            fontSize = 25.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.Red,
+                            fontFamily = titleText,
+                            modifier = Modifier.padding(start = 8.dp)
                         )
                     }
                 },
@@ -859,15 +868,15 @@ fun FilmItem(
             .clip(
                 shape = RoundedCornerShape(8.dp),
             )
-            /*.graphicsLayer(scaleX = scaleAnimatable.value, scaleY = scaleAnimatable.value)
-            .pointerInput(Unit) {
-                detectTransformGestures { _, pan, zoom, _ ->
-                    // Use the scale factor from zoom to handle pinch-to-zoom gesture
-                    scaleState *= zoom
-                    // Limit the minimum and maximum scale factors if needed
-                    scaleState = scaleState.coerceIn(0.5f, 2.0f)
-                }
-            }*/
+        /*.graphicsLayer(scaleX = scaleAnimatable.value, scaleY = scaleAnimatable.value)
+        .pointerInput(Unit) {
+            detectTransformGestures { _, pan, zoom, _ ->
+                // Use the scale factor from zoom to handle pinch-to-zoom gesture
+                scaleState *= zoom
+                // Limit the minimum and maximum scale factors if needed
+                scaleState = scaleState.coerceIn(0.5f, 2.0f)
+            }
+        }*/
     )
 }
 

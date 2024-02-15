@@ -132,7 +132,7 @@ fun CastItem(
             contentDescription = castName,
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .size(imageSize)
+                .size(120.dp)
                 .clip(CircleShape)
         )
 

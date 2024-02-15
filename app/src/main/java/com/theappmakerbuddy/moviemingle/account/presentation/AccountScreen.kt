@@ -37,6 +37,7 @@ import com.theappmakerbuddy.moviemingle.destinations.AboutScreenDestination
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.theappmakerbuddy.moviemingle.R
+import com.theappmakerbuddy.moviemingle.common.presentation.theme.titleText
 
 @Destination
 @Composable
@@ -114,7 +115,7 @@ fun AccountScreenContent(
             TopAppBar(
                 backgroundColor = primaryDark,
             ) {
-                Image(
+              /*  Image(
                     painterResource(
                         id = R.drawable.muviz
                     ),
@@ -123,6 +124,17 @@ fun AccountScreenContent(
                         .fillMaxWidth()
                         .height(90.dp)
                         .padding(8.dp)
+                )*/
+                Text(
+                    text = "Movie Mingle",
+                    fontSize = 27.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Red,
+                    fontFamily = titleText,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+
                 )
             }
         }
@@ -133,7 +145,7 @@ fun AccountScreenContent(
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize(),
-            contentPadding = PaddingValues(16.dp)
+            contentPadding = PaddingValues(horizontal = 16.dp)
         ) {
             items(accountItems) { item ->
                 AccountItems(
@@ -203,7 +215,7 @@ private fun GetInTouchDialog(
                         .clickable {
                             val intent = Intent(Intent.ACTION_VIEW)
                             intent.data =
-                                Uri.parse("https://www.linkedin.com/in/joel-kanyi-037270174/")
+                                Uri.parse("https://www.linkedin.com/in/mayursinh-parmar/")
                             startActivity(context, intent, null)
                         },
                     verticalAlignment = Alignment.CenterVertically,
@@ -236,7 +248,7 @@ private fun GetInTouchDialog(
                 Spacer(modifier = Modifier.height(24.dp))
 
 
-                Row(
+               /* Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
@@ -276,7 +288,7 @@ private fun GetInTouchDialog(
                         contentDescription = null
                     )
                 }
-                Spacer(modifier = Modifier.height(24.dp))
+                Spacer(modifier = Modifier.height(24.dp))*/
 
 
                 Row(
@@ -289,7 +301,7 @@ private fun GetInTouchDialog(
 
                             val intent = Intent(Intent.ACTION_VIEW)
                             intent.data =
-                                Uri.parse("https://github.com/JoelKanyi")
+                                Uri.parse("https://github.com/mayur228")
                             startActivity(context, intent, null)
                         },
                     verticalAlignment = Alignment.CenterVertically,
@@ -319,10 +331,9 @@ private fun GetInTouchDialog(
                         contentDescription = null
                     )
                 }
-                Spacer(modifier = Modifier.height(24.dp))
+//                Spacer(modifier = Modifier.height(24.dp))
 
-
-                Row(
+                /*Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .clickable {
@@ -361,7 +372,7 @@ private fun GetInTouchDialog(
                         tint = primaryGray,
                         contentDescription = null
                     )
-                }
+                }*/
             }
         },
         confirmButton = {
