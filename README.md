@@ -8,6 +8,8 @@
 
 📌Jetpack Compose: Crafted a modern, declarative UI for an immersive user experience.
 
+📌Coroutines: Efficiently handle asynchronous tasks, ensuring a smooth and responsive app.
+
 📌Gradle Catalog: Efficient project management and dependency handling.
 
 📌Coil: Swift and efficient image loading for a visually stunning presentation.
