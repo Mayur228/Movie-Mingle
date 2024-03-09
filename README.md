@@ -2,6 +2,10 @@
 
 🎬 App Demo Showcase: Dive into "Movie Mingle" - Your Personal Movie & TV Show Hub with Jetpack Compose! 🍿📱
 
+## VIDEO
+
+https://github.com/Mayur228/Movie-Mingle/assets/87631098/e9463d49-fd21-419a-b3b0-a45dd3b8aa90
+
 🌐 Tech Stack Highlights:
 
 📌Retrofit: Seamless data fetching from the server.
